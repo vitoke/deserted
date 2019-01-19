@@ -141,19 +141,21 @@ Imagine we have the following class that we want to serialize:
 
 ```typescript
 class CounterState {
-  constructor() {
+  constructor(initialCount = 0) {
     this.state = {
-      count: 1,
+      count: initialCount,
       modifications: 0
     }
   }
 
   increase() {
-    this.state = { count: this.state.count + 1, modifications: this.state.modifications + 1 }
+    this.state.count++
+    this.state.modifications++
   }
 
   decrease() {
-    this.state = { count: this.state.count - 1, modifications: this.state.modifications + 1 }
+    this.state.count--
+    this.state.modifications++
   }
 }
 ```
@@ -166,7 +168,7 @@ import { deserted, Converters } from 'deserted'
 
 const serializer = deserted.withConverters(Converters.allProps(CounterState))
 
-const counter = new CounterState()
+const counter = new CounterState(10)
 counter.increase()
 
 const counterAsString = serializer.serialize(counter)
