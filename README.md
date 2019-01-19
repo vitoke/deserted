@@ -174,7 +174,7 @@ counter.increase()
 const counterAsString = serializer.serialize(counter)
 ```
 
-If you have a lot of custom classes that need the same converter, you can specify that as follows:
+If you have a lot of custom classes that need the same type of converter, you can specify that as follows:
 
 ```typescript
 const serializer = deserted.withConverters(
