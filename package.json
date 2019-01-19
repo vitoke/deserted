@@ -1,6 +1,6 @@
 {
   "name": "deserted",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple and lonely serialization library for JS",
   "keywords": [
     "serialize",
