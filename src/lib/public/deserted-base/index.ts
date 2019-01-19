@@ -163,7 +163,7 @@ export class Deserted {
   }
 
   /**
-   * Returns the resulting from denormalizing the normalized input, meaning that objects and classes are re-instantited, and the
+   * Returns the value resulting from denormalizing the normalized input, meaning that objects and classes are re-instantited, and the
    * states are put back, and also references are re-instated.
    * @param input a normalized object
    */
