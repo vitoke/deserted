@@ -95,8 +95,9 @@ export class Deserted {
     const { converters, options } = this
 
     function ser(item: any, path: string[]): SerItem {
+      const type = typeof item
       // We don't want to serialize functions
-      if (typeof item === 'function') {
+      if (type === 'function') {
         return { fun: ser(options.functionConverter.from(item), path) }
       }
 
@@ -104,12 +105,12 @@ export class Deserted {
       if (
         item === null ||
         item === undefined ||
-        (typeof item !== 'symbol' && typeof item !== 'object')
+        (type !== 'symbol' && type !== 'object')
       ) {
         return { val: item }
       }
 
-      if (typeof item === 'symbol') {
+      if (type === 'symbol') {
         return { sym: options.symbolConverter.from(item) }
       }
 

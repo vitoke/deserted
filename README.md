@@ -188,4 +188,8 @@ const serializer = deserted.withConverters(
 The Deserted library is simple yet powerful, and allows to serialize complex object graphs with circular references
 with little effort. And it also makes deep cloning of objects a breeze.
 
+## Author
+
+Arvid Nicolaas
+
 # Have fun!
