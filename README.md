@@ -1,4 +1,4 @@
-# deserted
+# DEPRECATED
 
 A simple and lonely serialization library for JS
 
